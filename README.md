@@ -1,11 +1,11 @@
-About sphinxcontrib-autoyaml
-============================
+About sphinxcontrib-autoyaml-feedstock
+======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinxcontrib-autoyaml-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/Jakski/sphinxcontrib-autoyaml
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinxcontrib-autoyaml-feedstock/blob/main/LICENSE.txt)
 
 Summary: Sphinx autodoc extension for documenting YAML files from comments
 
