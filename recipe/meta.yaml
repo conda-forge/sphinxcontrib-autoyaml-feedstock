@@ -28,10 +28,9 @@ test:
   imports:
     - sphinxcontrib
   commands:
-    - pip list | grep -E "{{ name }}\s+{{ version }}"
+    - pip check
   requires:
     - pip
-    - m2-grep  # [win]
     - python {{ pytnon_min }}
 
 about:
