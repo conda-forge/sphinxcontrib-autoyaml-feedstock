@@ -1,13 +1,13 @@
 {% set name = "sphinxcontrib-autoyaml" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: dc87ade28d7c5a6e34ccff0d76e99a07c675679b5f2895a68d0dbd0d68e607c9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6a56f93878735170e5504ca3030250960adafaffa7fb0d7177223d597874e9e9
 
 build:
   noarch: python
@@ -18,20 +18,20 @@ requirements:
   host:
     - poetry-core >=1.0.0
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - ruamel.yaml >=0.16.12
     - sphinx >=3.5.1,<6
 
 test:
   imports:
-    - sphinxcontrib
+    - sphinxcontrib.autoyaml
   commands:
-    - pip list | grep -E "{{ name }}\s+{{ version }}"
+    - pip check
   requires:
     - pip
-    - m2-grep  # [win]
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Jakski/sphinxcontrib-autoyaml
