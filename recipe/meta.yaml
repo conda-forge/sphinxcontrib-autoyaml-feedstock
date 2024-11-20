@@ -31,7 +31,7 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ pytnon_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Jakski/sphinxcontrib-autoyaml
