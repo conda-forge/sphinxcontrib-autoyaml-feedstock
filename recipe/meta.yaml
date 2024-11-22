@@ -1,5 +1,5 @@
 {% set name = "sphinxcontrib-autoyaml" %}
-{% set version = "1.1.2" %}
+{% set version = "1.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6a56f93878735170e5504ca3030250960adafaffa7fb0d7177223d597874e9e9
+  sha256: 50b0db1ad7ff888774609d3b8bdda7b008423af156aeb94a04d79e0be610b136
 
 build:
   noarch: python
